@@ -1,42 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: anaji-el <anaji-el@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/04/14 05:23:55 by anaji-el          #+#    #+#             */
-/*   Updated: 2022/04/15 04:45:35 by anaji-el         ###   ########.fr       */
+/*   Created: 2022/04/14 05:54:06 by anaji-el          #+#    #+#             */
+/*   Updated: 2022/04/14 05:59:43 by anaji-el         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-
-int	ft_atoi(const char *str)
+size_t	ft_strlen(const char *s)
 {
-	long	i;
-	long	s;
-	int	j;
+	size_t	i;
 
 	i = 0;
-	s = 0;
-	j = 1;
-	while (str[i] == ' ' || str[i] == '\t' || str[i] == '\n' || str[i] == '\v'
-		|| str[i] == '\f' || str[i] == '\r')
-		str++;
-	if (str[i] == '-' || str[i] == '+')
-	{
-		if (str[i] == '-')
-		{
-			j *= -1;
-		}
+	
+	while (s[i] != '\0')
 		i++;
-	}
-	while (str[i] >= 48 && str[i] <= 57)
-	{
-		s = (s * 10 + str[i] - 48);
-		i++; 
-	}
-	return (s * j);
+	return (i);
 }

@@ -1,42 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: anaji-el <anaji-el@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/04/14 05:23:55 by anaji-el          #+#    #+#             */
-/*   Updated: 2022/04/15 04:45:35 by anaji-el         ###   ########.fr       */
+/*   Created: 2022/04/14 05:33:26 by anaji-el          #+#    #+#             */
+/*   Updated: 2022/04/15 04:48:13 by anaji-el         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-
-int	ft_atoi(const char *str)
+char	*ft_strjoin(char const *s1, char const *s2)
 {
-	long	i;
-	long	s;
-	int	j;
-
+	char	*new_str;
+	int		i;
+	int		j;
+	int		f;
+	
 	i = 0;
-	s = 0;
-	j = 1;
-	while (str[i] == ' ' || str[i] == '\t' || str[i] == '\n' || str[i] == '\v'
-		|| str[i] == '\f' || str[i] == '\r')
-		str++;
-	if (str[i] == '-' || str[i] == '+')
-	{
-		if (str[i] == '-')
-		{
-			j *= -1;
-		}
-		i++;
-	}
-	while (str[i] >= 48 && str[i] <= 57)
-	{
-		s = (s * 10 + str[i] - 48);
-		i++; 
-	}
-	return (s * j);
+	j = 0;
+	f = 0;
+	new_str = malloc(ft_strlen(s1) + ft_strlen(s2) + 1);
+	if (!s1 || !s2 || !new_str)
+		return (NULL);
+	while (s1[i])
+		new_str[f++] = s1[i++];
+	while (s2[j])
+		new_str[f++] = s2[j++];
+	new_str[f] = '\0';
+	return (new_str);
 }
