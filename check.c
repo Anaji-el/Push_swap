@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   check.c                                            :+:      :+:    :+:   */
+/*   check->c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: anaji-el <anaji-el@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/21 23:40:42 by anaji-el          #+#    #+#             */
-/*   Updated: 2022/04/18 13:00:23 by anaji-el         ###   ########.fr       */
+/*   Updated: 2022/04/20 09:45:13 by anaji-el         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,18 +18,6 @@ int	ft_isdigit(int n)
 		return (1);
 	return (0);
 }
-
-// char	f_args_to_string(char **argv)
-// {
-// 	int	i;
-// 	int	j;
-
-// 	i = 0;
-// 	j = 0;
-	
-// 	while ()
-// }
-
 
 int	arg_valid(const char *str)
 {
@@ -70,3 +58,22 @@ char	*args_to_string(const char **argv)
 	}
 	return (str);
 }
+
+int	is_duplicate(int *array, int num, int len)
+{
+	int	i;
+
+	i = 0;
+	while (i < len)
+	{
+		if (num == array[i])
+			return (-1);
+		i++;
+	}
+	return (0);
+}
+
+// static void fill_stack(t_node **stack, char **tab, bool *error)
+// {
+// 
+// }
