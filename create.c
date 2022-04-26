@@ -1,24 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   create.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: anaji-el <anaji-el@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/04/14 05:54:06 by anaji-el          #+#    #+#             */
-/*   Updated: 2022/04/22 12:52:03 by anaji-el         ###   ########.fr       */
+/*   Created: 2022/04/22 11:09:21 by anaji-el          #+#    #+#             */
+/*   Updated: 2022/04/22 11:23:35 by anaji-el         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-size_t	ft_strlen(const char *s)
+t_node	create(int n)
 {
-	size_t	i;
-
-	i = 0;
+	t_node	*node;
 	
-	while (s[i] != '\0')
-		i++;
-	return (i);
+	node = (t_node *)malloc(sizeof(t_node));
+	node->data = n;
+	node->next = NULL;
+	return (node);
 }

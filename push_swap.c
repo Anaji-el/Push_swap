@@ -6,7 +6,7 @@
 /*   By: anaji-el <anaji-el@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/17 12:00:49 by anaji-el          #+#    #+#             */
-/*   Updated: 2022/04/22 15:57:31 by anaji-el         ###   ########.fr       */
+/*   Updated: 2022/04/25 02:03:41 by anaji-el         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ int main(int argc, char const *argv[])
 	int		i;
 
 	str = args_to_string(argv);
-	split_str = ft_split(str, ' ');
+		split_str = ft_split(str, ' ');
 	len = 0;
 	while (split_str[len])
 		len++;
@@ -42,6 +42,7 @@ int main(int argc, char const *argv[])
 		printf("%d ", array[i]);
 		i++;
 	}
+	printf("%s",str);
 	
 	return (0);
 }
