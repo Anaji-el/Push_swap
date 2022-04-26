@@ -59,21 +59,14 @@ char	*args_to_string(const char **argv)
 	return (str);
 }
 
-int	is_duplicate(int *array, int num, int len)
+int	is_duplicate(t_node *first, t_node *second)
 {
-	int	i;
-
-	i = 0;
-	while (i < len)
+	while (first)
 	{
-		if (num == array[i])
-			return (-1);
-		i++;
+		if (first->data != second->next->data && second != '\0')
+		{
+			second = second->next;
+		}
+		first = first->next;
 	}
-	return (0);
 }
-
-// static void fill_stack(t_node **stack, char **tab, bool *error)
-// {
-// 
-// }
