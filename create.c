@@ -6,13 +6,13 @@
 /*   By: anaji-el <anaji-el@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/22 11:09:21 by anaji-el          #+#    #+#             */
-/*   Updated: 2022/04/22 11:23:35 by anaji-el         ###   ########.fr       */
+/*   Updated: 2022/04/28 15:24:27 by anaji-el         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-t_node	create(int n)
+t_node	*create(int n)
 {
 	t_node	*node;
 	

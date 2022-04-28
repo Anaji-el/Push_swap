@@ -64,9 +64,25 @@ int	is_duplicate(t_node *first, t_node *second)
 	while (first)
 	{
 		if (first->data != second->next->data && second != '\0')
-		{
 			second = second->next;
-		}
 		first = first->next;
+	}
+	return 0;
+}
+
+void	fill_stack(t_node **stack, char *str)
+{
+	int		size;
+	t_node	*node;
+	char	**tab;
+
+	tab = ft_split(str, ' ');
+	size = 0;
+	while (tab[size])
+		size++;
+	while (--size >= 0)
+	{
+		node = create(ft_atoi(tab[size]));
+		add(node, stack);
 	}
 }

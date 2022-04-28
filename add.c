@@ -1,27 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap.c                                        :+:      :+:    :+:   */
+/*   add.c                                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: anaji-el <anaji-el@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/04/17 12:00:49 by anaji-el          #+#    #+#             */
-/*   Updated: 2022/04/28 15:28:02 by anaji-el         ###   ########.fr       */
+/*   Created: 2022/04/28 15:09:26 by anaji-el          #+#    #+#             */
+/*   Updated: 2022/04/28 15:09:36 by anaji-el         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-int main(int argc, char const *argv[])
+void	add(t_node *node, t_node **stack)
 {
-	t_node	*a;
-	t_node	*b;
-
-	if (argc == 1)
-		return (0);
-	char	*str;
-
-	str = args_to_string(argv);
-	fill_stack(&a, str);
-	return (0);
+	if (!node || !stack)
+		return ;
+	node->next = (*stack);
+	(*stack) = node;
 }
