@@ -59,13 +59,31 @@ char	*args_to_string(const char **argv)
 	return (str);
 }
 
+// int 	is_duplicate(t_node *a)
+// {
+// 	t_node *tmp;
+// 	tmp = a;
+// 	printf("the a is %d",(int)a);
+// 	printf("the a is %d",(int)a->next);
+// 	return(0);
+// 	while (a)
+// 	{
+// 		if (a->data != a->next->data)
+// 			a = a->next;
+// 		if (a->data == a->next->data)
+// 			return(0);
+// 	}
+// 	return(1);
+// }
+
 int	is_duplicate(t_node *first, t_node *second)
 {
-	while (first)
+	while (second)
 	{
 		if (first->data != second->next->data && second != '\0')
 			second = second->next;
 		first = first->next;
+		return 1;
 	}
 	return 0;
 }

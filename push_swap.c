@@ -6,7 +6,7 @@
 /*   By: anaji-el <anaji-el@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/17 12:00:49 by anaji-el          #+#    #+#             */
-/*   Updated: 2022/04/28 17:42:57 by anaji-el         ###   ########.fr       */
+/*   Updated: 2022/05/01 06:33:38 by anaji-el         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,8 +24,8 @@ int main(int argc, char const *argv[])
 
 	str = args_to_string(argv);
 	fill_stack(&a, str);
-	if (is_duplicate())
-		exit(1);
+	if (is_duplicate(a , b))
+		write(1,"Error\n",6);
 	temp = a;
 	while (temp) {
 		printf("%d\n", temp->data);
