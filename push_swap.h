@@ -6,7 +6,7 @@
 /*   By: anaji-el <anaji-el@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/21 23:46:17 by anaji-el          #+#    #+#             */
-/*   Updated: 2022/05/01 07:48:37 by anaji-el         ###   ########.fr       */
+/*   Updated: 2022/05/03 17:38:07 by anaji-el         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,8 +40,7 @@ void	ft_putstr(char *str);
 int		arg_valid(const char *str);
 int		ft_isdigit(int n);
 char	*args_to_string(const char **argv);
-// int		is_duplicate(t_node *a);
-int	is_duplicate(t_node *first, t_node *second);
+int		is_duplicate(t_node *node, int num);
 int		get_size(t_node stack);
 int		get_min(t_node *stack);
 int		get_max(t_node *stack);
@@ -49,5 +48,7 @@ bool	sorted(t_node *stack);
 void	fill_stack(t_node **stack, char *str);
 void	add(t_node *node, t_node **stack);
 t_node	*create(int n);
+void	swap(t_node *stack, char *str);
+void	rotate(t_node *stack, char *str);
 
 #endif

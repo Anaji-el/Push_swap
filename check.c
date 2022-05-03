@@ -60,14 +60,13 @@ char	*args_to_string(const char **argv)
 }
 
 
-int	is_duplicate(t_node *first, t_node *second)
+int	is_duplicate(t_node *node, int num)
 {
-	while (second)
+	while (node)
 	{
-		if (first->data != second->next->data && second != '\0')
-			second = second->next;
-		first = first->next;
-		return 1;
+		if (node->data == num)
+			return -1;
+		node = node->next;
 	}
 	return 0;
 }
@@ -77,6 +76,7 @@ void	fill_stack(t_node **stack, char *str)
 	int		size;
 	t_node	*node;
 	char	**tab;
+	int		num;
 
 	tab = ft_split(str, ' ');
 	size = 0;
@@ -84,7 +84,10 @@ void	fill_stack(t_node **stack, char *str)
 		size++;
 	while (--size >= 0)
 	{
-		node = create(ft_atoi(tab[size]));
+		num = ft_atoi(tab[size]);
+		if (is_duplicate(*stack , num) == -1)
+			write(1,"Error\n",6);
+		node = create(num);
 		add(node, stack);
 	}
 }

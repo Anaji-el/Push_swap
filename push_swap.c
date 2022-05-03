@@ -6,7 +6,7 @@
 /*   By: anaji-el <anaji-el@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/17 12:00:49 by anaji-el          #+#    #+#             */
-/*   Updated: 2022/05/01 06:39:19 by anaji-el         ###   ########.fr       */
+/*   Updated: 2022/05/03 17:37:49 by anaji-el         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,8 +24,12 @@ int main(int argc, char const *argv[])
 
 	str = args_to_string(argv);
 	fill_stack(&a, str);
-	if (is_duplicate(a , a))
-		write(1,"Error\n",6);
+	temp = a;
+	while (temp) {
+		printf("%d\n", temp->data);
+		temp = temp->next;
+	}
+	rotate(a,"ra");
 	temp = a;
 	while (temp) {
 		printf("%d\n", temp->data);
