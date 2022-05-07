@@ -49,7 +49,7 @@ char	*args_to_string(const char **argv)
 	while (argv[i])
 	{
 		if (arg_valid(argv[i]) == -1)
-			exit(1);
+			put_error("Error\n");
 		tmp = ft_strjoin(str, argv[i]);
 		free(str);
 		str = ft_strjoin(tmp, " ");
@@ -86,7 +86,7 @@ void	fill_stack(t_node **stack, char *str)
 	{
 		num = ft_atoi(tab[size]);
 		if (is_duplicate(*stack , num) == -1)
-			write(1,"Error\n",6);
+			put_error("Error\n");
 		node = create(num);
 		add(node, stack);
 	}

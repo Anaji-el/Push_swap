@@ -6,7 +6,7 @@
 /*   By: anaji-el <anaji-el@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/14 05:23:55 by anaji-el          #+#    #+#             */
-/*   Updated: 2022/04/15 04:45:35 by anaji-el         ###   ########.fr       */
+/*   Updated: 2022/05/07 16:52:42 by anaji-el         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,5 +38,11 @@ int	ft_atoi(const char *str)
 		s = (s * 10 + str[i] - 48);
 		i++; 
 	}
+	if (s * j >= INT_MIN || s * j <= INT_MAX)
+	{
+		put_error("Error\n");
+		exit(1);
+	}
+
 	return (s * j);
 }

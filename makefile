@@ -6,64 +6,23 @@
 #    By: anaji-el <anaji-el@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/04/28 17:20:49 by anaji-el          #+#    #+#              #
-#    Updated: 2022/04/28 17:22:55 by anaji-el         ###   ########.fr        #
+#    Updated: 2022/05/07 16:35:00 by anaji-el         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME := push_swap
+FILES = push_swap.c check.c ft_strjoin.c ft_strlen.c ft_split.c add.c ft_atoi.c create.c sorting.c ft_putstr.c get_size.c sort_three.c get_max.c sort_five.c get_index.c get_min.c push.c put_error.c
 
-RM := rm -rf
-
-CC := gcc
-
-CFLAGS := -Wall -Werror -Wextra
-
-.PHONY: all clean fclean re
-
-INCLUDE := include/
-
-SRC_DIR := src/
-
-LIB_DIR := libft/
-
-CFILES := main.c create_stack.c stack_utils.c stack_utils_2.c utils.c sort.c div_sort.c
-HFILES := $(INCLUDE)push_swap.h
-
-SRC := $(addprefix $(SRC_DIR), $(CFILES))
-SRCB := $(addprefix $(SRC_DIR), checker.c create_stack.c stack_utils.c stack_utils_2.c sort.c div_sort.c utils.c get_next_line.c)
-
-OBJ := $(SRC:.c=.o)
-OBJB := $(SRCB:.c=.o)
-
-LIB := libft/libft.a
-
-FT := ft
-
-#
-# rules
-#
-all: $(NAME)
-
-$(NAME): $(OBJ) $(LIB)
-	$(CC) $(CFLAGS) -o $@ $(OBJ) -L$(LIB_DIR) -l$(FT)
-
-bonus: checker
-
-checker: $(OBJB) $(LIB)
-	$(CC) $(CFLAGS) -o $@ $(OBJB) -L$(LIB_DIR) -l$(FT)
-
-$(LIB):
-	make -C $(LIB_DIR) bonus
-	make -C $(LIB_DIR) clean
-
-%.o: %.c $(HFILES)
-	$(CC) $(CFLAGS) -c $< -I$(INCLUDE) -o $@
-
-clean:
-	$(RM) $(OBJ) $(OBJB)
-
-fclean: clean
-	$(RM) $(NAME) checker
-	make -C $(LIB_DIR) fclean
-
-re: fclean all
+CFLAGS = -Wall -Wextra -Werror
+CC = gcc
+RM = rm -rf
+NAME = push_swap
+INC = push_swap.h
+OCFILES = $(FILES:.c=.o)
+all : $(NAME)
+$(NAME) : $(INC) $(FILES)
+	$(CC) $(CFLAGS) $(FILES) -o push_swap
+clean :
+	$(RM) push_swap
+fclean : clean
+	$(RM) $(NAME)
+re : fclean all

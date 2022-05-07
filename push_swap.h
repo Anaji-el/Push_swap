@@ -6,7 +6,7 @@
 /*   By: anaji-el <anaji-el@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/21 23:46:17 by anaji-el          #+#    #+#             */
-/*   Updated: 2022/05/06 20:21:46 by anaji-el         ###   ########.fr       */
+/*   Updated: 2022/05/07 16:49:12 by anaji-el         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include <stdbool.h>
+#include <limits.h>
 
 typedef struct s_node
 {
@@ -55,4 +56,5 @@ void	sort_three(t_node **a);
 void	sort_five(t_node **a, t_node **b);
 void	rotate(t_node *stack, char *str);
 void	push(t_node **stack1, t_node **stack2, char *str);
+void	put_error(char *msg);
 #endif

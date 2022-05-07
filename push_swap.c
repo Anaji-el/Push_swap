@@ -6,7 +6,7 @@
 /*   By: anaji-el <anaji-el@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/17 12:00:49 by anaji-el          #+#    #+#             */
-/*   Updated: 2022/05/06 17:53:00 by anaji-el         ###   ########.fr       */
+/*   Updated: 2022/05/07 17:10:00 by anaji-el         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,16 +20,20 @@ int main(int argc, char const *argv[])
 	int	size;
 
 	if (argc == 1)
-		return (0);
+		exit(1);
+	// if(argc == 2)
+	// 	exit(1);
 	char	*str;
 
 	str = args_to_string(argv);
+	// if(strlen(str) == 1)
+	// 	exit(1);
 	fill_stack(&a, str);
 	temp = a;
-	while (temp) {
-		printf("%d\n", temp->data);
-		temp = temp->next;
-	}
+	// while (temp) {
+	// 	printf("%d\n", temp->data);
+	// 	temp = temp->next;
+	// }
 	//rotate(a,"ra");
 	
 	size = get_size(a);
@@ -38,9 +42,9 @@ int main(int argc, char const *argv[])
 	if(size == 5)
 		sort_five(&a, &b);
 	temp = a;
-	while (temp) {
-		printf("%d\n", temp->data);
-		temp = temp->next;
-	}
+	// while (temp) {
+	// 	printf("%d\n", temp->data);
+	// 	temp = temp->next;
+	// }
 	return (0);
 }
