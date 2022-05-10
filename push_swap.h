@@ -6,7 +6,7 @@
 /*   By: anaji-el <anaji-el@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/21 23:46:17 by anaji-el          #+#    #+#             */
-/*   Updated: 2022/05/07 16:49:12 by anaji-el         ###   ########.fr       */
+/*   Updated: 2022/05/09 13:56:09 by anaji-el         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,7 @@
 typedef struct s_node
 {
 	int				data;
+	int	index;
 	struct s_node	*next;
 }t_node;
 
@@ -48,8 +49,9 @@ int		get_max(t_node *stack);
 bool	sorted(t_node *stack);
 void	fill_stack(t_node **stack, char *str);
 void	add(t_node *node, t_node **stack);
+void	pop(t_node **stack);
 t_node	*create(int n);
-int	get_index(t_node *stack, int nm);
+int		get_index(t_node *stack, int nm);
 void	r_rotate(t_node *stack, char *str);
 void	swap(t_node *stack, char *str);
 void	sort_three(t_node **a);
@@ -57,4 +59,8 @@ void	sort_five(t_node **a, t_node **b);
 void	rotate(t_node *stack, char *str);
 void	push(t_node **stack1, t_node **stack2, char *str);
 void	put_error(char *msg);
+void	push_all_to_a(t_node **stack_a, t_node **stack_b);
+void	sort_using_radix(t_node **stack_a, t_node **stack_b);
+//static void	radix_utils(t_node **stack_a, t_node **stack_b, int bite, int len);
+int	count_len(t_node *stack);
 #endif

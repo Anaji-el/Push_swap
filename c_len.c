@@ -1,48 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*   c_len.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: anaji-el <anaji-el@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/04/14 05:23:55 by anaji-el          #+#    #+#             */
-/*   Updated: 2022/05/08 23:09:34 by anaji-el         ###   ########.fr       */
+/*   Created: 2022/05/08 22:47:20 by anaji-el          #+#    #+#             */
+/*   Updated: 2022/05/08 22:47:44 by anaji-el         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-
-int	ft_atoi(const char *str)
+int	count_len(t_node *stack)
 {
-	long	i;
-	long	s;
-	int	j;
+	int		i;
+	t_node	*tmp;
 
+	tmp = stack;
 	i = 0;
-	s = 0;
-	j = 1;
-	while (str[i] == ' ' || str[i] == '\t' || str[i] == '\n' || str[i] == '\v'
-		|| str[i] == '\f' || str[i] == '\r')
-		str++;
-	if (str[i] == '-' || str[i] == '+')
+	if (stack != NULL)
 	{
-		if (str[i] == '-')
-		{
-			j *= -1;
-		}
+		tmp = tmp->next;
+		tmp = tmp->next;
 		i++;
+		while (tmp != stack->next)
+		{
+			tmp = tmp->next;
+			i++;
+		}
 	}
-	while (str[i] >= 48 && str[i] <= 57)
-	{
-		s = (s * 10 + str[i] - 48);
-		i++; 
-	}
-	if (s * j < INT_MIN || s * j > INT_MAX)
-	{
-		put_error("Error\n");
-		exit(1);
-	}
-
-	return (s * j);
+	return (i);
 }
