@@ -6,7 +6,7 @@
 /*   By: anaji-el <anaji-el@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/15 04:56:19 by anaji-el          #+#    #+#             */
-/*   Updated: 2022/04/25 00:49:33 by anaji-el         ###   ########.fr       */
+/*   Updated: 2022/05/13 16:47:12 by anaji-el         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,8 @@ bool	sorted(t_node *stack)
 	while (stack && stack->next)
 	{
 		if (stack->data > stack->next->data)
-			return (false);
+			return (0);
 		stack = stack->next;
 	}
-	return (true);
+	return (1);
 }

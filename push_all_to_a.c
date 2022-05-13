@@ -6,7 +6,7 @@
 /*   By: anaji-el <anaji-el@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/08 22:37:38 by anaji-el          #+#    #+#             */
-/*   Updated: 2022/05/08 22:54:45 by anaji-el         ###   ########.fr       */
+/*   Updated: 2022/05/09 22:44:56 by anaji-el         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,5 +15,5 @@
 void	push_all_to_a(t_node **stack_a, t_node **stack_b)
 {
 	while (*stack_b != NULL)
-		push(stack_b, stack_a,NULL);
+		push(stack_b, stack_a, "pa");
 }

@@ -28,9 +28,9 @@ int	arg_valid(const char *str)
 		return (-1);
 	while (str[i])
 	{
-		if (str[i] != '-' && str[i] != ' ' && !(ft_isdigit(str[i])))
+		if (str[i] != '-' && str[i] != ' ' &&  str[i] != '+' && !(ft_isdigit(str[i])))
 			return (-1);
-		if (str[i] == '-' && !(ft_isdigit(str[i + 1])))
+		if (str[i] == '-' && str[i] != '+' && !(ft_isdigit(str[i + 1])))
 			return (-1);
 		i++;
 	}
@@ -77,7 +77,6 @@ void	fill_stack(t_node **stack, char *str)
 	t_node	*node;
 	char	**tab;
 	int		num;
-
 	tab = ft_split(str, ' ');
 	size = 0;
 	while (tab[size])

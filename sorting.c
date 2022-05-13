@@ -6,7 +6,7 @@
 /*   By: anaji-el <anaji-el@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/01 06:48:00 by anaji-el          #+#    #+#             */
-/*   Updated: 2022/05/03 20:33:15 by anaji-el         ###   ########.fr       */
+/*   Updated: 2022/05/12 17:32:41 by anaji-el         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,9 @@ void	swap(t_node *stack, char *str)
 	tmp = stack->data;
 	stack->data = stack->next->data;
 	stack->next->data = tmp;
+	tmp = stack->index;
+	stack->index = stack->next->index;
+	stack->next->index = tmp;
 	if (str)
 		ft_putstr(str);
 }
@@ -28,7 +31,7 @@ void	swap(t_node *stack, char *str)
 void	rotate(t_node *stack, char *str)
 {
 	if (!stack || !(stack->next))
-	return ;
+		return ;
 	while (stack)
 	{
 		swap(stack, 0);

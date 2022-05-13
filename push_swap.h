@@ -6,7 +6,7 @@
 /*   By: anaji-el <anaji-el@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/21 23:46:17 by anaji-el          #+#    #+#             */
-/*   Updated: 2022/05/09 13:56:09 by anaji-el         ###   ########.fr       */
+/*   Updated: 2022/05/13 16:47:23 by anaji-el         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,10 +23,16 @@
 typedef struct s_node
 {
 	int				data;
-	int	index;
+	int				index;
 	struct s_node	*next;
+	struct s_node	*prev;
 }t_node;
 
+typedef struct s_list
+{
+	void			*ptr;
+	struct s_list	*next;
+}	t_list;
 // typedef struct s_stack
 // {
 // 	t_node	stack_a;
@@ -44,7 +50,9 @@ int		ft_isdigit(int n);
 char	*args_to_string(const char **argv);
 int		is_duplicate(t_node *node, int num);
 int		get_size(t_node *stack);
+void	rotate(t_node *stack, char *str);
 int		get_min(t_node *stack);
+void	push(t_node **stack1, t_node **stack2, char *str);
 int		get_max(t_node *stack);
 bool	sorted(t_node *stack);
 void	fill_stack(t_node **stack, char *str);
@@ -56,11 +64,13 @@ void	r_rotate(t_node *stack, char *str);
 void	swap(t_node *stack, char *str);
 void	sort_three(t_node **a);
 void	sort_five(t_node **a, t_node **b);
-void	rotate(t_node *stack, char *str);
-void	push(t_node **stack1, t_node **stack2, char *str);
 void	put_error(char *msg);
-void	push_all_to_a(t_node **stack_a, t_node **stack_b);
 void	sort_using_radix(t_node **stack_a, t_node **stack_b);
+void	push_all_to_a(t_node **stack_a, t_node **stack_b);
 //static void	radix_utils(t_node **stack_a, t_node **stack_b, int bite, int len);
-int	count_len(t_node *stack);
+void	give_index(t_node **stack, long long *check);
+int	compare(t_node *stack, int data);
+int	get_m(t_node *stack);
+
+// ************************************************
 #endif

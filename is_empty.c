@@ -6,13 +6,13 @@
 /*   By: anaji-el <anaji-el@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/24 04:36:22 by anaji-el          #+#    #+#             */
-/*   Updated: 2022/04/24 04:40:17 by anaji-el         ###   ########.fr       */
+/*   Updated: 2022/05/11 21:53:07 by anaji-el         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-int	is_empty()
+int	is_empty(t_node *top)
 {
 	top == NULL;
 		return ;

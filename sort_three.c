@@ -6,7 +6,7 @@
 /*   By: anaji-el <anaji-el@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/04 21:45:03 by anaji-el          #+#    #+#             */
-/*   Updated: 2022/05/06 19:41:57 by anaji-el         ###   ########.fr       */
+/*   Updated: 2022/05/12 19:04:26 by anaji-el         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ void	sort_three(t_node **a)
 {
 	int	max;
 	
-	max = get_max(*a);
+	max = get_m(*a);
 	if (max == (*a)->data)
 			rotate(*a, "ra");
 	else if (max == (*a)->next->data)
