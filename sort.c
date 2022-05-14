@@ -6,7 +6,7 @@
 /*   By: anaji-el <anaji-el@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/10 19:04:00 by anaji-el          #+#    #+#             */
-/*   Updated: 2022/05/10 19:04:17 by anaji-el         ###   ########.fr       */
+/*   Updated: 2022/05/14 22:11:26 by anaji-el         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -110,7 +110,6 @@ void	sort(t_node **a, t_node **b, int size, t_list **garbage)
 		}
 	}
 	sort3(a, 3);
-	back_maxs_from_b(a, b, garbage, v.start_size/2);
+	back_maxs_from_b(a, b, garbage, v.start_size / 2);
 	sort5(a, b, v.start_size);
 }
-

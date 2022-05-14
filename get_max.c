@@ -6,7 +6,7 @@
 /*   By: anaji-el <anaji-el@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/24 22:25:22 by anaji-el          #+#    #+#             */
-/*   Updated: 2022/05/12 19:04:50 by anaji-el         ###   ########.fr       */
+/*   Updated: 2022/05/13 23:35:47 by anaji-el         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 int	get_m(t_node *stack)
 {
 	int	max;
-	
+
 	max = stack->data;
 	while (stack)
 	{
@@ -29,7 +29,7 @@ int	get_m(t_node *stack)
 int	get_max(t_node *stack)
 {
 	int	max;
-	
+
 	max = stack->index;
 	while (stack)
 	{

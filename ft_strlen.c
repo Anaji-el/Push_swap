@@ -6,7 +6,7 @@
 /*   By: anaji-el <anaji-el@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/14 05:54:06 by anaji-el          #+#    #+#             */
-/*   Updated: 2022/04/22 12:52:03 by anaji-el         ###   ########.fr       */
+/*   Updated: 2022/05/13 23:33:59 by anaji-el         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,6 @@ size_t	ft_strlen(const char *s)
 	size_t	i;
 
 	i = 0;
-	
 	while (s[i] != '\0')
 		i++;
 	return (i);

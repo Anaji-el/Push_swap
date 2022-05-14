@@ -6,7 +6,7 @@
 /*   By: anaji-el <anaji-el@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/14 05:33:26 by anaji-el          #+#    #+#             */
-/*   Updated: 2022/04/15 04:48:13 by anaji-el         ###   ########.fr       */
+/*   Updated: 2022/05/13 23:34:14 by anaji-el         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	int		i;
 	int		j;
 	int		f;
-	
+
 	i = 0;
 	j = 0;
 	f = 0;

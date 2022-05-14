@@ -6,7 +6,7 @@
 /*   By: anaji-el <anaji-el@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/05 15:07:25 by anaji-el          #+#    #+#             */
-/*   Updated: 2022/05/12 18:49:09 by anaji-el         ###   ########.fr       */
+/*   Updated: 2022/05/14 22:22:43 by anaji-el         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,33 +14,27 @@
 
 void	sort_five(t_node **a, t_node **b)
 {
-	int index;
-	int min;
-	int size;
-	
-	size = get_size(*a);
-	
-	while (size > 3)
+	int	index;
+	int	min;
+
+	while (get_size(*a) > 3)
 	{
 		min = get_min(*a);
-		index = get_index(*a,min);
-		if ( index > size / 2 && index <= size)
-			{
-				r_rotate(*a, "rra");
-				index++;
-			}
-		if ( index <= size / 2 && index > 1)
-			{
-				rotate(*a, "ra");
-				index--;
-			}
-		if (min == (*a)->data)
+		index = get_index(*a, min);
+		if (index > get_size(*a) / 2 && index <= get_size(*a))
 		{
-			push(a, b, "pb");
-			size--;
+			r_rotate(*a, "rra");
+			index++;
 		}
+		if (index <= get_size(*a) / 2 && index > 1)
+		{
+			rotate(*a, "ra");
+			index--;
+		}
+		if (min == (*a)->data)
+			push(a, b, "pb");
 	}
 	sort_three(a);
-	push(b,a,"pa");
-	push(b,a,"pa");
+	push(b, a, "pa");
+	push(b, a, "pa");
 }

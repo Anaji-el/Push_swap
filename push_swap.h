@@ -6,19 +6,19 @@
 /*   By: anaji-el <anaji-el@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/21 23:46:17 by anaji-el          #+#    #+#             */
-/*   Updated: 2022/05/13 16:47:23 by anaji-el         ###   ########.fr       */
+/*   Updated: 2022/05/14 22:09:04 by anaji-el         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-# ifndef PUSH_SWAP_H
+#ifndef PUSH_SWAP_H
 # define PUSH_SWAP_H
 
-#include <stdio.h>
-#include <unistd.h>
-#include <stdlib.h>
-#include <string.h>
-#include <stdbool.h>
-#include <limits.h>
+# include <stdio.h>
+# include <unistd.h>
+# include <stdlib.h>
+# include <string.h>
+# include <stdbool.h>
+# include <limits.h>
 
 typedef struct s_node
 {
@@ -33,11 +33,6 @@ typedef struct s_list
 	void			*ptr;
 	struct s_list	*next;
 }	t_list;
-// typedef struct s_stack
-// {
-// 	t_node	stack_a;
-// 	t_node	stack_b;
-// }t_stack;
 
 int		ft_atoi(const char *str);
 char	*ft_strjoin(char const *s1, char const *s2);
@@ -45,6 +40,7 @@ char	**ft_split(char const *s, char c);
 size_t	ft_strlen(const char *s);
 int		ft_strncmp(const char *s1, const char *s2, size_t n);
 void	ft_putstr(char *str);
+int		ft_memcmp(const char *s1, const char *s2, int n);
 int		arg_valid(const char *str);
 int		ft_isdigit(int n);
 char	*args_to_string(const char **argv);
@@ -67,10 +63,10 @@ void	sort_five(t_node **a, t_node **b);
 void	put_error(char *msg);
 void	sort_using_radix(t_node **stack_a, t_node **stack_b);
 void	push_all_to_a(t_node **stack_a, t_node **stack_b);
-//static void	radix_utils(t_node **stack_a, t_node **stack_b, int bite, int len);
 void	give_index(t_node **stack, long long *check);
-int	compare(t_node *stack, int data);
-int	get_m(t_node *stack);
-
-// ************************************************
+int		compare(t_node *stack, int data);
+int		get_m(t_node *stack);
+void	free_all(t_node **stack);
+void	apply_actions(t_node **a, t_node **b);
+void	quick_sort(int *array, int start, int end);
 #endif

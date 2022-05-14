@@ -6,7 +6,7 @@
 /*   By: anaji-el <anaji-el@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/01 06:48:00 by anaji-el          #+#    #+#             */
-/*   Updated: 2022/05/12 17:32:41 by anaji-el         ###   ########.fr       */
+/*   Updated: 2022/05/14 22:24:05 by anaji-el         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 void	swap(t_node *stack, char *str)
 {
 	int	tmp;
-	
+
 	if (!stack || !(stack->next))
 		return ;
 	tmp = stack->data;
