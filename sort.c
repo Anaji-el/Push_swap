@@ -51,6 +51,7 @@ void	back_maxs_from_b_in_chunks(t_node **a, t_node **b, t_list **garbage)
 			}
 			else
 				rotate(*b, "rb");
+			//qtestsfnjks
 		}
 	}
 }
